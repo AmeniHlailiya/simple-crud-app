@@ -3,10 +3,6 @@ const mongoose = require("mongoose");
 
 const app = express()
 
-app.listen(3000, ()=> {
-    console.log('le serveur est éxécuté sur le port 3000');
-});
-
 app.get('/', (req,res) => {
     res.send("hello from node API ameniiii");
 });
@@ -14,7 +10,7 @@ app.get('/', (req,res) => {
 
 mongoose
   .connect(
-    "mongodb://localhost:27017/"
+    "mongodb://localhost:27017/crud"
   )
   .then(() => {
     console.log("Connected to database!");
